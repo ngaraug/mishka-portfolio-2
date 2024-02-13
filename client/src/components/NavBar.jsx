@@ -34,6 +34,16 @@ function callNavTrigger(){
     console.log("Clicked menu");
     document.getElementById("mainListDiv").classList.toggle("show_list");
     document.getElementById("mainListDiv").style.display = "block";
+
+    const navDiv = document.querySelector(".nav")
+    navDiv.classList.toggle("darkNav")
+
+    const logo = document.querySelector("#home-logo-link")
+    logo.classList.toggle("invertedColor")
+
+    navTrigger.classList.toggle("invertedColor")
+
+
 }
 
 
