@@ -4,14 +4,33 @@
 } */
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --nav-height: 12vh;
+    --nav-height-responsive: 8vh;
+
+    --silver: #c9c7c7;
+	  --cadet: #b4bbc8;
+	  --crayola: #9fafc9;
+	  --sage: #8b8f74;
+    --ship: #79817c;
+
+    /* New palette */
+    --brown: #9a8471;
+    --dark-brown: #6b452f;
+    --biege: #e8e3de;
+}
+
+
   html,
   body {
       /* margin: 0;
       padding: 0; */
       box-sizing: border-box;
       font-family: "Quicksand", sans-serif;
-      font-size: 62.5%;
-      font-size: 10px;
+      font-family: "Roboto Condensed", sans-serif;
   }
   /*-- Inspiration taken from abdo steif -->
   /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
@@ -19,7 +38,7 @@
   /* Navbar section */
   
   .nav {
-      background-color: rgba(255, 0, 0, 0.226);
+      /* background-color: rgba(255, 0, 0, 0.226); */
     
       width: 100%;
       /* height: 65px; */
@@ -27,13 +46,15 @@
       position: fixed;
       line-height: 65px;
       text-align: center;
+
+      backdrop-filter: blur(5px);
   }
   
   .nav div.logo {
       float: left;
       width: auto;
       height: auto;
-      padding-left: 3rem;
+      padding-left: 3vw;
   }
   
   .nav div.logo a {
@@ -42,14 +63,13 @@
       /* color: black; */
       font-size: 2.5rem;
   }
-  
-  .nav div.logo a:hover {
-      color: #00E676;
-  }
-  
+   
   .nav div.main_list {
       height: 65px;
       float: right;
+      width: 30vw;
+
+      
   }
   
   .nav div.main_list ul {
@@ -59,25 +79,39 @@
       list-style: none;
       margin: 0;
       padding: 0;
+      justify-content: space-between;
+      
   }
   
   .nav div.main_list ul li {
+        
       width: auto;
       height: 65px;
       padding: 0;
-      padding-right: 3rem;
+      padding-top: 2vh;
+      padding-right: 4rem;
   }
   
   .nav div.main_list ul li a {
       text-decoration: none;
+      font-family: "Roboto Condensed", sans-serif;
       color: #fff;
       /* color: black; */
-      line-height: 65px;
-      font-size: 2.4rem;
+      /* line-height: 65px; */
+      font-size: 1.7rem;
+      font-weight: 300;
+
+      color: #0000;
+        background: 
+            linear-gradient(90deg, #5f0eaa 50%,#000 0) 
+            var(--_p,100%)/200% no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: .4s;
   }
   
   .nav div.main_list ul li a:hover {
-      color: #00E676;
+        --_p: 0%;
   }
   
   
@@ -353,10 +387,6 @@
   }
   
   
-  
-  
-  
-  
   .myH2 {
     text-align:center;
     font-size: 4rem;
@@ -370,5 +400,162 @@
   @media all and (max-width:700px){
     .myP {
       padding:2%;
+    }
+    .nav div.main_list ul li a{
+        color: white;
+    }
+    .nav div.main_list ul{
+        justify-content: center;
+    } 
+    
+  }
+
+
+  
+  /* logo */
+  #mishka-logo{
+    height: fit-content;
+    height: 8vh;
+  }
+
+  /* Logo end */
+
+  /* My */
+  #main-container{
+    padding-top: 10vh;
+    background-color: var(--brown);
+    min-height: 100vh;
+    max-height: fit-content;
+  }
+
+  /* Home page */
+  Home{
+
+  }
+  .content-holder-1{
+    /* background-color: red; */
+    width: 100%;
+    height: 88%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-holder-2{
+    /* background-color: blue; */
+    display: flex;
+    width: 80%;
+    height: 80%;
+  }
+  .picture-holder{
+    width: 50%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-holder{
+    width: 50%;
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  
+    cursor: default;
+  }
+  .heading-holder{
+    width: 100%;
+  
+    font-size: 3.5rem;
+    font-weight: 200;
+  }
+  .para-holder{
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .about-para{
+    font-size: 1.2em;
+   
+  }
+  .mishka-image{
+    width: 400px;
+    /* box-shadow: -200px 50px 0px 0px var(--cadet); */
+    box-shadow: -200px 50px 0px 0px #9A86A4;
+  }
+  
+  .contacts-holder{
+    /* background-color: blue; */
+  
+  }
+  .contact{
+    background-color: #9a86a49c;
+  
+    border-radius: 10%;
+  
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+  }
+  .contacts-holder{
+    width: 100%;
+  
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .contact-icon{
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+  
+    transition: transform 0.2s;
+  }
+  .contact-icon:hover{
+    transform: scale(1.15);
+  }
+  .splletters{
+    color: #480c80;
+  }
+  
+  
+  
+  @media (max-width: 858px){
+    .main-container{
+      /* background-color: red; */
+      height: max-content;
+    }
+    .content-holder-2{
+      flex-direction: column;
+    }
+    .picture-holder{
+      width: 100%;
+    }
+    .about-holder{
+      width: 100%;
+  
+      
+      margin: 2rem 0rem;
+    }
+    .heading-holder{
+      margin-bottom: 2rem;
+    }
+    .para-holder{
+      text-align: center;
+    }
+    .mishka-image{
+      width: 250px;
+  
+      margin: 3rem 0rem;
+  
+      box-shadow: -60px 30px 0px 0px var(--silver);
+    }
+    .about-para{
+      font-size: 1.2rem;
+    }
+  
+    .contacts-holder{
+      margin-top: 4rem;
+      margin-bottom: 2rem;
     }
   }

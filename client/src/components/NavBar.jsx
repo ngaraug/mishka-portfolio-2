@@ -7,7 +7,7 @@ export default function NavBar() {
     <nav className="nav">
         <div className="container">
             <div className="logo">
-                <a href="#">Your Logo</a>
+                <a href="/" id='home-logo-link'><img id='mishka-logo' src="/images/transparent-logo-1.png" alt="" /></a>
             </div>
             <div id="mainListDiv" className="main_list">
                 <ul className="navlinks">
