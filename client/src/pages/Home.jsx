@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <NavBar />
       <div id="main-container">
-      <div className='content-holder-1'>
+        <div className='content-holder-1'>
           <div className='content-holder-2'>
             <div className='picture-holder'>
               <img src="/images/home-page-image-2.jpg" alt="" className='mishka-image'/>

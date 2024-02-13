@@ -62,6 +62,8 @@
       width: auto;
       height: auto;
       padding-left: 3vw;
+
+      transition: 0.5s;
   }
   
   .nav div.logo a {
@@ -157,7 +159,8 @@
         transition: 1s;
     }
       .navTrigger {
-          display: block;     
+          display: block;  
+          transition: 0.5s;   
       }
       .nav div.logo {
           margin-left: 15px;
