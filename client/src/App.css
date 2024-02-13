@@ -168,7 +168,8 @@
           right: 0;
           left: 0;
           bottom: 0;
-          background-color: #111;
+          background-color: #1111115b;
+          /* backdrop-filter: blur(5px); */
           /*same background color of navbar*/
           background-position: center top;
       }
