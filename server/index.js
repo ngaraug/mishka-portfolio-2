@@ -10,7 +10,7 @@ const uri = process.env.MONGOURI;
 
 mongoose.connect(uri)
     .then( 
-        () => console.log("Connected to BD")
+        () => console.log("Connected to DB")
     ).catch(
         (err) => console.log(err)
     )
@@ -21,4 +21,4 @@ app.listen(3000, ()=>{
     console.log("Server running on port 3000!!!");
 })
 
-app.use("/api/user", blogRoutes);
+app.use("/api/blog", blogRoutes);
