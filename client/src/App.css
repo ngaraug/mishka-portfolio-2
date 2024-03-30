@@ -605,6 +605,8 @@ Admin home{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.36);
 }
 .login-input{
     width: 60%;
@@ -628,7 +630,6 @@ Admin home{
     .login-input{
         width: 60%;
         height: 2.5em;
-        border-radius: 0.5rem;
         
     }
 }
