@@ -21,6 +21,7 @@
     --brown: #9a8471;
     --dark-brown: #6b452f;
     --biege: #e8e3de;
+    --purple: #480c80;
 }
 
 
@@ -32,6 +33,19 @@
       font-family: "Quicksand", sans-serif;
       font-family: "Roboto Condensed", sans-serif;
   }
+  html::-webkit-scrollbar {
+    width: 8px;
+    }
+
+    html::-webkit-scrollbar-track {
+        background-color: var(--brown);
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background-color: var(--purple);
+        background-repeat: no-repeat, no-repeat;
+        
+    }
   /*-- Inspiration taken from abdo steif -->
   /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
   
@@ -571,6 +585,74 @@
       margin-bottom: 2rem;
     }
   }
+
+Blogs page{
+
+}
+.page-title{
+    font-size: 5rem;
+    font-weight: 200;
+}
+.page-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.page-contents{
+    width: 90%;
+}
+
+#all-blogs-container{
+    margin-top: 2rem;
+}
+.single-blog-container{
+    margin: 3rem 0rem ;
+    display: flex;
+    justify-content: left;
+}
+.single-blog-container:nth-of-type(2n){
+    justify-content: right;
+}
+.blog{
+    background-color: #E8E3DE;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    width: 75%;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.36);
+}
+.blog-title{
+    font-size: 2.5rem;
+}
+.blog-short-title{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.blog-short-body{
+    font-size: 1.2rem;
+}
+@media (max-width: 858px){
+    .page-title{
+        font-size: 4rem;
+        font-weight: 300;
+        padding-left: 1.5rem;
+    }
+    .single-blog-container{
+        margin: 3rem 0rem ;
+        display: flex;
+        justify-content: center;
+    }
+    .single-blog-container:nth-of-type(2n){
+        justify-content: center;
+    }
+    .blog{
+        width: 90%;
+    }
+    .blog-title{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
 
 Admin home{
 
