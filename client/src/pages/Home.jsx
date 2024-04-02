@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
               </div>
 
 
-              <div className='contacts-holder'>
+              {/* <div className='contacts-holder'>
                 <div className='contact instagram'>
                   <a className='contact-link' href="">
                     <img className='contact-icon' src="/images/instagramSVG.svg" alt="" />
@@ -38,7 +39,7 @@ export default function Home() {
                 </div>
                 <div className='contact twitter'>
                   <a className='contact-link' href="">
-                    <img className='contact-icon' src="/images/twitterSVG.svg" alt="" />
+                    <img className='contact-icon' src="/images/gmailSVG.svg" alt="" />
                   </a>
                 </div>
                 <div className='contact email'>
@@ -46,13 +47,14 @@ export default function Home() {
                     <img className='contact-icon' src="/images/facebookSVG.svg" alt="" />
                   </a>
                 </div>
-              </div>
+              </div> */}
 
 
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
