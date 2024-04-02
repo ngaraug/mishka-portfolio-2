@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Blog from '../components/Blog.jsx'
+import Footer from '../components/Footer.jsx'
 
 import blogs from '../../public/Blogs/blogs.js'
 
@@ -16,7 +17,7 @@ export default function BlogsPage() {
             <div id='all-blogs-container'>
               {
                 blogs.map((data) =>{
-                  return <Blog key={data.id} title={data.title} shortTitle={data.shortTitle} body={data.body}/>
+                  return <Blog key={data.id} id={data.id} title={data.title} shortTitle={data.shortTitle} body={data.body}/>
                 })
               }
             </div>
@@ -24,6 +25,7 @@ export default function BlogsPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

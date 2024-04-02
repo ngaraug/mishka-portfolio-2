@@ -27,8 +27,8 @@
 
   html,
   body {
-      /* margin: 0;
-      padding: 0; */
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       font-family: "Quicksand", sans-serif;
       font-family: "Roboto Condensed", sans-serif;
@@ -38,12 +38,13 @@
     }
 
     html::-webkit-scrollbar-track {
-        background-color: var(--brown);
+        background-color: var(--dark-brown);
     }
 
     html::-webkit-scrollbar-thumb {
         background-color: var(--purple);
         background-repeat: no-repeat, no-repeat;
+        border-radius: 1rem;
         
     }
   /*-- Inspiration taken from abdo steif -->
@@ -713,5 +714,74 @@ Admin home{
         width: 60%;
         height: 2.5em;
         
+    }
+}
+
+Footer {
+
+}
+
+#footer-main-container{
+    color: var(--crayola);
+    background-image: url('/images/footer-fabric-texture-1.jpg');
+    /* min-height: 35vh; */
+    padding: 1rem;
+    box-shadow: inset 0px 32px 19px -8px rgba(0,0,0,0.3);
+    font-family: monospace;
+    font-size: larger;
+}
+.footer-body-container{
+    display: flex;
+    justify-content: space-between;
+    height: 95%;
+    margin-bottom: 3rem;
+}
+.footer-logo{
+    height: 10vh;
+    filter: invert(1);
+}
+.footer-email{
+    /* margin: 0.5rem; */
+}
+.footer-links-holder{
+    margin-top: 1.5rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    font-size: 1.1rem;
+}
+.footer-page-links{
+    width: 50%;
+}
+.footer-socials-links{
+    width: 50%;
+}
+.footer-copyrights-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.copy-rights{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 858px){
+    .footer-body-container{
+        flex-direction: column;
+        margin: 2rem 0rem ;
+        margin-bottom: 2rem;
+    }
+    .footer-page-links{
+        margin: 2rem 0rem;
+    }
+    .footer-links-holder{
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-copyrights-container{
+        width: 100%;
+        flex-direction: column;
     }
 }
