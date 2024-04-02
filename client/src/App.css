@@ -620,6 +620,11 @@ Blogs page{
     border-radius: 1.5rem;
     width: 75%;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.36);
+    transition: transform 0.1s linear;
+}
+.blog:hover{
+    transform: scale(1.015);
+    cursor: pointer;
 }
 .blog-title{
     font-size: 2.5rem;
@@ -654,6 +659,59 @@ Blogs page{
         margin-bottom: 1rem;
     }
 }
+
+SingleBlogPage{
+
+}
+/* .page-container{
+    defined in blog page
+} */
+.blog-container{
+    width: 90%;
+}
+.blog-title{
+    font-size: 5rem;
+    padding-top: 1rem;
+    font-weight: 300;
+}
+.blog-title-extra{
+    padding-bottom: 1rem ;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    display: flex;
+    justify-content: space-between;
+}
+.blog-body{
+    background-color: #E8E3DE;
+    min-height: 60vh;
+
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.blog-body > p {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    line-height: 3rem;
+}
+.blog-posted-date{
+    width: 100%;
+    text-align: right;
+}
+@media (max-width: 858px){
+    .blog-title{
+        font-size: 3.5rem;
+        padding-top: 0rem;
+    }
+    .blog-title-extra{
+        font-size: 1.8rem;
+    }
+    .blog-body{
+        padding: 1.5rem;
+    }
+}
+
 
 Admin home{
 
@@ -739,9 +797,6 @@ Footer {
 .footer-logo{
     height: 10vh;
     filter: invert(1);
-}
-.footer-email{
-    /* margin: 0.5rem; */
 }
 .footer-links-holder{
     margin-top: 1.5rem;
