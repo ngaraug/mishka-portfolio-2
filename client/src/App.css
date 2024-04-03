@@ -627,7 +627,8 @@ Blogs page{
     cursor: pointer;
 }
 .blog-title{
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 300;
 }
 .blog-short-title{
     margin-bottom: 1rem;
@@ -635,7 +636,8 @@ Blogs page{
     font-weight: 200;
 }
 .blog-short-body{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
 }
 @media (max-width: 858px){
     .page-title{
@@ -669,7 +671,7 @@ SingleBlogPage{
 .blog-container{
     width: 90%;
 }
-.blog-title{
+.single-blog-title{
     font-size: 5rem;
     padding-top: 1rem;
     font-weight: 300;

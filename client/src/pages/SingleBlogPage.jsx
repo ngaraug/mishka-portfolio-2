@@ -1,8 +1,26 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import { useParams } from 'react-router-dom'
+
+import blogs from '../../public/Blogs/blogs'
+import _ from 'lodash'
 
 export default function SingleBlogPage() {
+    const allBlogs = blogs;
+    const params = useParams();
+    const blogTitle = params.blogTitle
+
+    var title = "Blog not found!"
+    var body =  "Blog not found!"
+
+    allBlogs.forEach(blog => {
+        if(_.kebabCase(blog.title) === blogTitle){
+            title = blog.title
+            body = blog.body
+        }
+    })
+    
   return (
     <> 
         <NavBar />
@@ -10,7 +28,7 @@ export default function SingleBlogPage() {
             <div className='page-container'>
                 <div className='blog-container '>
                     <div className='blog-header'>
-                        <h1 className='blog-title'>Hold on or Let go?</h1>
+                        <h1 className='single-blog-title'>{ title }</h1>
                         <div className='blog-title-extra'>
                             <span className='blog-by'>by <span className='splletters'>Mishka</span></span>
                             
@@ -18,7 +36,7 @@ export default function SingleBlogPage() {
                     </div>
                     <div className='blog-body'>
                          <p>
-                         Why not let go that's not worth holding on? Why not hold on to what's not worth letting go? After all we are all humans and humans die. Don’t they? Why waste time fighting, showing whose right, drifting apart? Aren’t we all wasting our time as such fighting every day to be together with someone then why waste time by not loving them not telling them what you feel, not telling you care, not letting go, not holding on. Life seems very short when you have a partner and very long and when you don’t so if you have why not keep them forever. Why not fight for `us’ instead of `me’ why not fight to stay why not fight so that nothing comes along your beautiful relation. Why not know the difference between holding on and letting go!
+                         { body }
                          </p>
                          <span className='blog-posted-date'>Posted on: 12th July, 2023 10:45pm</span>  
                     </div>

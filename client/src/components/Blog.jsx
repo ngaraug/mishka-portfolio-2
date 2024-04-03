@@ -6,17 +6,20 @@ export default function Blog(props) {
     const shortBody = body.substring(0, 200)
     const navigate = useNavigate()
 
-    const handleClick = () =>{
-      navigate('/blogs/blog')
+    const handleClick = (e) =>{
+      const blogId = e.target.id
+      const blogLink = '/blogs/' + blogId
+      navigate(blogLink)
+
     }
     
   return (
     <>
         <div className='single-blog-container'>
             <div className='blog' onClick={handleClick}>
-              <h1 className='blog-title'>{title}</h1>
+              <h1 className='blog-title' id={id} onClick={handleClick}>{title}</h1>
               {/* <h1 className='blog-short-title'>{shortTitle}</h1> */}
-              <p className='blog-short-body'>{shortBody}<a href="" className='link-to-blog'>  ...Read blog</a></p>
+              <p className='blog-short-body' id={id} onClick={handleClick}>{shortBody}...</p>
             </div>
         </div>
     </>

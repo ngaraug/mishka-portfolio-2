@@ -17,7 +17,7 @@ function App() {
           <Route path='/blogs' element={<BlogsPage />}/>
           <Route path='/reviews' element={<BooksRecPage />}/>
           <Route path='/admin' element={<AdminHome />}/>
-          <Route path='/blogs/blog' element={<SingleBlogPage />}/> {/* Temporary */}
+          <Route path='/blogs/:blogTitle' element={<SingleBlogPage />}/> {/* Temporary */}
         </Routes>
       </BrowserRouter>
     </>
