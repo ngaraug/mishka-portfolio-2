@@ -16,7 +16,7 @@ export default function Blog(props) {
   return (
     <>
         <div className='single-blog-container'>
-            <div className='blog' onClick={handleClick}>
+            <div className='blog' id={id} onClick={handleClick}>
               <h1 className='blog-title' id={id} onClick={handleClick}>{title}</h1>
               {/* <h1 className='blog-short-title'>{shortTitle}</h1> */}
               <p className='blog-short-body' id={id} onClick={handleClick}>{shortBody}...</p>
