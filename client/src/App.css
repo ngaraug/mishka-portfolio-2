@@ -696,6 +696,7 @@ SingleBlogPage{
     font-size: 1.5rem;
     padding-bottom: 1rem;
     line-height: 3rem;
+    white-space: pre-wrap;
 }
 .blog-posted-date{
     width: 100%;
@@ -842,4 +843,19 @@ Footer {
         width: 100%;
         flex-direction: column;
     }
+}
+
+under construction{
+
+}
+.under-construction{
+    width: 100%;
+    min-height: 80vh;
+    font-size: 3rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

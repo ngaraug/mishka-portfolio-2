@@ -9,7 +9,7 @@ export default function ArticlesPage() {
     <>
       <NavBar />
       <div id="main-container">
-          <div className='w-full h-screen flex flex-col justify-center text-5xl pl-96'>
+          <div className='under-construction'>
             <LuConstruction />
             <h1>Page under <span className='splletters'>construction !</span></h1>
           </div>
