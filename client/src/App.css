@@ -22,6 +22,7 @@
     --dark-brown: #6b452f;
     --biege: #e8e3de;
     --purple: #480c80;
+    --even-darker-brown: #522307;
 }
 
 
@@ -453,7 +454,7 @@
 
   /* My */
   #main-container{
-    padding-top: 12vh;
+    padding-top: 10vh;  /* Default value is 12vh*/
     background-color: var(--brown);
     min-height: 100vh;
     max-height: fit-content;
@@ -715,10 +716,16 @@ SingleBlogPage{
     }
 }
 
-
-Admin home{
+Admin login{
 
 }   
+#admin-main-container{
+    padding-top: 10vh;  /* Default value is 12vh*/
+    background-color: var(--biege);
+    min-height: 100vh;
+    max-height: fit-content;
+}
+
 .all-content-holder{
     /* background-color: red; */
 
@@ -730,7 +737,7 @@ Admin home{
     flex-direction: column;
 }
 .heading{
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     font-size: 3rem;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 300;
@@ -738,7 +745,7 @@ Admin home{
     margin-bottom: 10vh;
 }
 .admin-form{
-    background-color: #E8E3DE;
+    background-color: var(--brown);
 
     width: 30vw;
     height: 35vh;
@@ -777,7 +784,51 @@ Admin home{
         
     }
 }
+Admin Home{
 
+}
+.admin-home-header{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.admin-home-heading{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.admin-home-selector-holder{
+    min-height: 8vh;
+    width: 100%;
+    background-color: var(--brown);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.admin-content-selector-label{
+    width: 25vw;
+    height: 70%;
+    font-weight: 300;
+    font-size: 2rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: var(--dark-brown);
+    
+    border-radius: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.admin-content-selector:checked+label{
+    background-color: var(--even-darker-brown);
+    height: 100%;
+    border-radius: 0rem;
+}
 Footer {
 
 }

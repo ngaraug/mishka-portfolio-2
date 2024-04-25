@@ -28,9 +28,9 @@ export default function Footer() {
                             <div className='footer-socials-links'>
                                 <span className='text-white '>Follow me.</span>
                                 <div className='flex flex-col justify-evenly  h-3/5'>
-                                    <a href="">Facebook</a>
-                                    <a href="">Instagram</a>
-                                    <a href="">LinkedIn</a>
+                                    <a href="https://www.facebook.com/deardairytalks?mibextid=LQQJ4d">Facebook</a>
+                                    <a href="https://www.instagram.com/thedeardiarytalks?igsh=MWN4NjZzeGdxemxteA==">Instagram</a>
+                                    <a href="https://www.linkedin.com/in/mishka-bhagat-7b33001b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@ export default function Footer() {
                     <FaRegCopyright /><span>Copyrights Mishka Archana 2024.</span>
                 </div>
                 <div className='dev-by'>
-                    <p>This site was made with love by Gaurang</p>
+                    <p> <a href="https://www.linkedin.com/in/gaurang-mestry-6b84a0230">This site was made with love by Gaurang</a></p>
                 </div>
             </div>
         </div>
