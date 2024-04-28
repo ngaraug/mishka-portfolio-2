@@ -20,6 +20,8 @@ export default function SingleBlogPage() {
             body = blog.body
         }
     })
+
+    console.log(document.activeElement)
     
   return (
     <> 

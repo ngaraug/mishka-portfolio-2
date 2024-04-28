@@ -7,6 +7,7 @@ export default function Blog(props) {
     const navigate = useNavigate()
 
     const handleClick = (e) =>{
+      e.stopPropagation()
       const blogId = e.target.id
       const blogLink = '/blogs/' + blogId
       navigate(blogLink)

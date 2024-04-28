@@ -11,7 +11,7 @@ import AdminHome from './pages/admin/AdminHome.jsx'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter scrollBehavior="manual">
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/articles' element={<ArticlesPage />}/>
