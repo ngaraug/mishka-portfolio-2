@@ -160,7 +160,19 @@
       -webkit-transition: all 0.4s ease;
       transition: all 0.4s ease;
   } */
-  
+
+  /* Admin NavBar section */
+  .admin-navbar-title{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    
+    font-size: 3rem;
+  }
+  .admin-navbar-title > div{
+    padding-right: 1rem;
+    font-family:Arial, Helvetica, sans-serif;
+  }
   
   /* Media qurey section */
   
@@ -215,6 +227,12 @@
       }
       .nav div.media_button {
           display: block;
+      }
+      /* Admin NavBar */
+      .admin-navbar-title{
+        padding-top: 1rem;  
+        font-size: 1.2rem;
+        font-weight: bold;
       }
   }
   
@@ -789,14 +807,10 @@ Admin Home{
 }
 .admin-home-header{
     width: 100%;
-    height: 5vh;
+    height: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.admin-home-heading{
-    font-size: 2.5rem;
-    font-weight: 300;
 }
 .admin-home-selector-holder{
     min-height: 8vh;
@@ -824,10 +838,21 @@ Admin Home{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-.admin-content-selector:checked+label{
+.admin-content-selector-label-active{
+    height: 80%;
+    font-size: 2.2rem;
+    background-color: var(--even-darker-brown);
+}
+.admin-content-selector{
     background-color: var(--even-darker-brown);
     height: 100%;
     border-radius: 0rem;
+}
+@media (max-width: 858px){
+    .admin-content-selector-label{
+        width: 30vw;
+        font-size: 1.5rem;
+    }
 }
 Footer {
 
