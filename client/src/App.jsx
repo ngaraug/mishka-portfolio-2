@@ -7,6 +7,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import AdminLogin from './pages/admin/AdminLogin.jsx'
 import SingleBlogPage from './pages/SingleBlogPage.jsx'
 import AdminHome from './pages/admin/AdminHome.jsx'
+import AdminCreateBlogPage from './pages/admin/AdminCreateBlogPage.jsx'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/admin' element={<AdminLogin />}/>
           <Route path='/admin/home' element={<AdminHome />}/>
           <Route path='/blogs/:blogTitle' element={<SingleBlogPage />}/> {/* Temporary */}
+          <Route path='/admin/blog' element={<AdminCreateBlogPage />}/>
         </Routes>
       </BrowserRouter>
     </>

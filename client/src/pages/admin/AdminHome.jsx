@@ -48,3 +48,5 @@ export default function AdminHome() {
   )
 }
 
+// notes for next time: look for how to retain state on page refresh
+
