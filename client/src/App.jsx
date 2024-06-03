@@ -8,6 +8,7 @@ import AdminLogin from './pages/admin/AdminLogin.jsx'
 import SingleBlogPage from './pages/SingleBlogPage.jsx'
 import AdminHome from './pages/admin/AdminHome.jsx'
 import AdminCreateBlogPage from './pages/admin/AdminCreateBlogPage.jsx'
+import AdminCreateReviewsPage from './pages/admin/AdminCreateReviewsPage.jsx'
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path='/admin' element={<AdminLogin />}/>
           <Route path='/admin/home' element={<AdminHome />}/>
           <Route path='/blogs/:blogTitle' element={<SingleBlogPage />}/> {/* Temporary */}
-          <Route path='/admin/blog' element={<AdminCreateBlogPage />}/>
+          <Route path='/admin/create-blog' element={<AdminCreateBlogPage />}/>
+          <Route path='/admin/create-review' element={<AdminCreateReviewsPage />}/>
         </Routes>
       </BrowserRouter>
     </>

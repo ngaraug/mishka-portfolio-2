@@ -1,9 +1,15 @@
 import React from 'react'
 import blogs from '/public/Blogs/blogs.js'
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminReviewsDesk() {
   const totalBlogs = blogs.length;
   const allBlogs = blogs; 
+  const navigate = useNavigate()
+
+  const handleClick = (e) =>{ 
+    navigate('/admin/create-review')
+  }
   return (
     <>
         <div className='admin-blogs-desktop'>
@@ -16,7 +22,7 @@ export default function AdminReviewsDesk() {
                 {totalBlogs}
               </h2>
             </div>
-            <div className='admin-add-blog-button-container'>
+            <div className='admin-add-blog-button-container' onClick={handleClick}>
               <h1>
                 Create a book review
               </h1>
@@ -25,7 +31,7 @@ export default function AdminReviewsDesk() {
             <div className='admin-all-blogs-container'>
               <div className='admin-all-blogs-container-heading'>
                 <h1>
-                  All blogs
+                  All reviews
                 </h1>
               </div>
               <div>

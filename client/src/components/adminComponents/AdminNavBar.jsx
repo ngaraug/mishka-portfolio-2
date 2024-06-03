@@ -5,7 +5,7 @@ export default function AdminNavBar() {
     <nav className="nav">
         <div className="container">
             <div className="logo">
-                <a href="/" id='home-logo-link'><img id='mishka-logo' src="/images/transparent-logo-1.png" alt="" /></a>
+                <a href="/admin/home" id='home-logo-link'><img id='mishka-logo' src="/images/transparent-logo-1.png" alt="" /></a>
             </div>
         </div>
         <div className="admin-navbar-title">

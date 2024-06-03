@@ -914,7 +914,7 @@ Admin-blogs{
     justify-content: space-between;
     align-items: center;
     cursor: pointer; 
-    transition: background-position 1s ease-in-out; 
+    transition: background-position 0.5s ease-in-out; 
 }
 .admin-add-blog-button-container > h1{
     padding: 0vw 4vw;
@@ -956,7 +956,13 @@ Admin-blogs{
 }
 .admin-single-blog-button{
     margin: 0rem 1rem;
-    
+    background-color: white;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+}
+.admin-single-blog-button:hover{
+    transform: scale(1.1);
+    background-color: #8e76cf73;
 }
 @media (max-width: 858px){
     .admin-total-no-of-blogs-container{
@@ -981,7 +987,107 @@ Admin-blogs{
 		background-position: 0% 50%;
 	}
 }
+Admin create blog/review{
+    
+}
+.admin-create-blog-page-header{
+    background-color: var(--light-purple);
 
+    width: 100%;
+    height: 8vh;
+    padding-left: 2vw;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 2rem;
+    font-weight: 300;
+    
+    box-shadow: 0px 4px 6px 1px rgba(0,0,0,0.54);
+}
+.admin-create-blog-form-container{
+    min-height: 82vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-submit-button{
+
+    background-color: #7ED957;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    transition: box-shadow 0.2s linear;
+}
+.admin-submit-button:hover{
+    box-shadow: 2px 2px 7px 2px rgba(52, 83, 3, 0.829);
+}
+.admin-create-blog-form{
+    width: 80vw;
+    padding: 3vh 0vh;
+}
+#admin-create-blog-title{
+    border-radius: 1.5rem;
+    width: 50%;
+    margin-bottom: 3vh;
+    border: 0px solid black;
+    padding: 1rem 1.5rem; 
+    font-size: 1.25rem;
+}
+#admin-create-blog-date{
+    border-radius: 1.5rem;
+    width: 50%;
+    margin-bottom: 3vh;
+    border: 0px solid black;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+}
+#admin-create-blog-body{
+    border-radius: 1.5rem;
+    width: 90%;
+    height: 35vh;
+    margin-bottom: 3vh;
+    border: 0px solid black;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+}
+.admin-blog-input-titles{
+    font-size: 1.25rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0.1rem;
+}
+
+.admin-upload-image{
+    background-color: white;
+    width: 90%;
+    border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3vh 0vh;
+}
+.admin-upload-image > label{
+    padding: 2vh;
+}
+.admin-upload-image > input{
+    padding: 2vh 0vh;
+}
+@media (max-width: 858px){
+    #admin-create-blog-title{
+        width: 100%;
+    }
+    #admin-create-blog-date{
+        width: 100%;
+    }
+    #admin-create-blog-body{
+        width: 100%;
+    }
+    .admin-upload-image{
+        width: 100%;
+    }
+}
 
 Footer {
 
