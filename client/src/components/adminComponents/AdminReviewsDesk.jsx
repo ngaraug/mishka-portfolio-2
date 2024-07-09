@@ -1,10 +1,10 @@
 import React from 'react'
-import blogs from '/public/Blogs/blogs.js'
+import reviews from '/public/Blogs/reviews.js'
 import { useNavigate } from 'react-router-dom';
 
 export default function AdminReviewsDesk() {
-  const totalBlogs = blogs.length;
-  const allBlogs = blogs; 
+  const totalReviews = reviews.length;
+  const allReviews = reviews; 
   const navigate = useNavigate()
 
   const handleClick = (e) =>{ 
@@ -19,7 +19,7 @@ export default function AdminReviewsDesk() {
                 Total reviews till date
               </h1>
               <h2>
-                {totalBlogs}
+                {totalReviews}
               </h2>
             </div>
             <div className='admin-add-blog-button-container' onClick={handleClick}>
@@ -36,23 +36,28 @@ export default function AdminReviewsDesk() {
               </div>
               <div>
                 {
-                  blogs.map(blog=>{
+                  reviews.length > 0 ? reviews.map(review=>{
                     return(
-                    <>
-                    <div className='admin-single-blog'>
-                      <h1>{blog.title.slice(0,40)}</h1>
-                      <div className='admin-single-blog-buttons-container'>
-                        <button className='admin-single-blog-button'>
-                          <img src="/images/edit.png" alt="edit blog" className='admin-single-blog-icon' />
-                        </button>
-                        <button className='admin-single-blog-button'>
-                          <img src="/images/delete.png" alt="delete blog" className='admin-single-blog-icon'/>
-                        </button>
+                    <div key={review.id}>
+                      <div className='admin-single-blog'>
+                        <h1>{review.id} | {review.title.slice(0,40)}</h1>
+                        <div className='admin-single-blog-buttons-container'>
+                          <button className='admin-single-blog-button'>
+                            <img src="/images/edit.png" alt="edit blog" className='admin-single-blog-icon' />
+                          </button> 
+                          <button className='admin-single-blog-button'>
+                            <img src="/images/delete.png" alt="delete blog" className='admin-single-blog-icon'/>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    </>
                     )
-                  })
+                  }) : (
+                    <div className='admin-single-blog'>
+                      No reviews
+                    </div>
+                  )
+                  
                 }
               </div>
             </div>

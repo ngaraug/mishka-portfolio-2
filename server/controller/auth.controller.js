@@ -24,7 +24,8 @@ export const changepass = async (req, res) =>{
 export const signin = async (req, res) =>{
     const passwd = req.body.password;
     if(!passwd){
-        res.console.error('Invalid password' );
+        // res.console.error('Invalid password' );
+        res.json({"invalidPassword" : true})
     }
     try {
         const pass = await Passwd.findOne({id: 'mishkaPass'})

@@ -756,13 +756,18 @@ Admin login{
     align-items: center;
     flex-direction: column;
 }
+#admin-login-mishka-logo{
+    height: 10vh;
+    margin-bottom: 5vh;
+
+}
 .heading{
     /* margin-top: 5vh; */
     font-size: 3rem;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 300;
     /* letter-spacing: 0.5ch; */
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
 }
 .admin-form{
     background-color: var(--brown);
@@ -790,6 +795,12 @@ Admin login{
 }
 .login-button:hover{
     transform: scale(1.1);
+}
+#admin-login-back-link-container{
+    margin: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: underline;
 }
 @media (max-width: 858px){
     .admin-form{
@@ -1073,6 +1084,34 @@ Admin create blog/review{
 }
 .admin-upload-image > input{
     padding: 2vh 0vh;
+}
+.admin-upload-image-label{
+    font-size: 1.2rem;
+}
+#admin-review-uploaded-image-preview-text{
+    font-size: 1.2rem;
+    height: 40vh;
+    width: 30vh;
+    padding: 2rem;
+
+    border: 1px solid var(--purple);
+    border-radius: 1.5rem;
+    margin: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#admin-review-uploaded-image-preview{
+    max-height: 40vh;
+    max-width: 30vh;
+
+    padding: 2rem;
+
+    border: 1px solid var(--purple);
+    border-radius: 1.5rem;
+    margin: 1.5rem;
+
 }
 @media (max-width: 858px){
     #admin-create-blog-title{

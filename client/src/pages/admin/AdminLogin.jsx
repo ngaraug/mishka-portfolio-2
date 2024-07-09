@@ -2,11 +2,13 @@ import React from 'react'
 import NavBar from '../../components/NavBar'
 import { useState } from 'react'
 import { Alert, Spinner } from 'flowbite-react'
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminLogin() {
   const [password, setPassword] = useState({'password': ''})
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
 
   const handleChange = (e) =>{
     setPassword({'password' : e.target.value})
@@ -33,7 +35,7 @@ export default function AdminLogin() {
         data = await res.json();
         if(data.passmatch){
           setErrorMessage(null);
-          
+          navigate('/admin/home')
         }else{
           setErrorMessage('Wrong Password');
         }
@@ -50,10 +52,11 @@ export default function AdminLogin() {
 
   return (
     <>
-        <NavBar />
+        {/* <NavBar /> */}
         <div id="admin-main-container">
           <div className='all-content-holder'>
             <h1 className='heading'>Admin Desktop</h1>
+            <img id='admin-login-mishka-logo' src="/images/transparent-logo-1.png" alt="" />
             <div className='form-holder'>
               {
                 loading && (
@@ -83,6 +86,9 @@ export default function AdminLogin() {
                     </Alert>    
                   )
                 }
+            <div id='admin-login-back-link-container'>
+              <a id='admin-login-back-link' href="/">Back to home</a>
+            </div>
           </div>
         </div>
     </>

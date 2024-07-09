@@ -38,19 +38,19 @@ export default function AdminBlogsDesk() {
                 {
                   blogs.map(blog=>{
                     return(
-                    <>
-                    <div className='admin-single-blog'>
-                      <h1>{blog.title.slice(0,40)}</h1>
-                      <div className='admin-single-blog-buttons-container'>
-                        <button className='admin-single-blog-button'>
-                          <img src="/images/edit.png" alt="edit blog" className='admin-single-blog-icon' />
-                        </button>
-                        <button className='admin-single-blog-button'>
-                          <img src="/images/delete.png" alt="delete blog" className='admin-single-blog-icon'/>
-                        </button>
+                    <div key={blog.id}>
+                      <div className='admin-single-blog'>
+                        <h1>{blog.id} | {blog.title.slice(0,40)}</h1>
+                        <div className='admin-single-blog-buttons-container'>
+                          <button className='admin-single-blog-button'>
+                            <img src="/images/edit.png" alt="edit blog" className='admin-single-blog-icon' />
+                          </button>
+                          <button className='admin-single-blog-button'>
+                            <img src="/images/delete.png" alt="delete blog" className='admin-single-blog-icon'/>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    </>
                     )
                   })
                 }

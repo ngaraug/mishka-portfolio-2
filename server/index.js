@@ -11,6 +11,7 @@ app.use(cors())
 // Importing Routes
 import blogRoutes from "./routes/blog.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import reviewRoutes from "./routes/review.routes.js"
 
 dotenv.config();
 const uri = process.env.MONGOURI;
@@ -29,6 +30,7 @@ app.get('/test', (req, res)=>{
 })
 app.use("/api/blog", blogRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/review", reviewRoutes);
 
 app.listen(process.env.PORT || 3000, ()=>{
     console.log("Server running on port 3000!!!");    
